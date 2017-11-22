@@ -13,7 +13,7 @@ acl Safe_ports port 488		# gss-http
 acl Safe_ports port 591		# filemaker
 acl Safe_ports port 777		# multiling http
 acl CONNECT method CONNECT
-acl LocalNet src {{ localnet}}
+acl LocalNet src {{ localnet }}
 http_access allow manager localhost
 http_access deny manager
 http_access deny !Safe_ports
