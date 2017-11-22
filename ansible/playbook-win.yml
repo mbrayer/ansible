@@ -1,0 +1,12 @@
+---
+- name: "Run powershell script"
+  hosts: "windows"
+  gather_facts: "false"
+  tasks:
+
+   - name: Copy a single file
+     win_copy:
+      src: files/application1.ini
+      dest: c:\work\
+
+...

@@ -1,0 +1,8 @@
+---
+  - name: creation user
+    user: name={{ user }} comment="master" shell=/bin/zsh
+  - name: utilisation de clef
+    authorized_key: user={{ user }} key={{ lookup('file', '/home/{{ user }}/.ssh/id_rsa.pub') }}
+  - name: configuration sudo
+    template: src=templates/sudoers.j2 dest=/etc/sudoers.d/{{ user }} validate='visudo -cf %s'
+...

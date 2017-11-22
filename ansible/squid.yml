@@ -1,0 +1,16 @@
+# Create squid.conf
+- hosts: server_linux
+  remote_user: root
+  tasks:
+
+          - apt: name=squid3 state=latest update_cache=yes
+          - template:
+                  src: squid.conf.j2
+                  dest: /etc/squid3/squid.conf
+                  owner: root
+                  group: root
+                  mode: '0644'
+
+          - service:
+                  name: squid3
+                  state: restarted

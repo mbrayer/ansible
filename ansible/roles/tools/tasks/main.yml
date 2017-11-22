@@ -1,0 +1,10 @@
+---
+- name: installation tools
+  apt: name={{ item }} update_cache=yes state=latest
+  with_items:
+    - htop
+    - git
+    - zsh
+    - sudo
+
+

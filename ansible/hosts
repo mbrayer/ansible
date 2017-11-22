@@ -1,0 +1,11 @@
+[server_linux]
+10.0.0.35
+
+[server_linux:vars]
+nixcraft_vlan_lan_subnet=10.0.0.8/8
+nixcraft_http_port=10.0.0.35:3128
+nixcraft_cloud_server_ip=72.xxx.yyy.zzz
+nixcraft_memory=1024
+
+[windows]
+10.0.0.2
