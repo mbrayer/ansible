@@ -1,5 +1,5 @@
 [server_linux]
-10.0.0.6
+10.0.0.7
 
 [server_linux:vars]
 localnet=10.0.0.8/8
