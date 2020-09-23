@@ -1,5 +1,5 @@
 ---
-- name: installation server Web
+- name: installation server Web1
   hosts: server_linux
   remote_user: root
   vars:
